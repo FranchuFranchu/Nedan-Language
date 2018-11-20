@@ -4,10 +4,9 @@
 			
 		</script><script type="text/javascript">
          function hide() {
-            $('#lexicon').hidden = !($('#lexicon').hidden)
+            $('#lexicon')[0].hidden = !($('#lexicon')[0].hidden)
          }
    	  	function align(s1,s2){
-   	  	console.log(s1+'\n'+s2)
    	  	s1 = s1.split(' ');
 		s2 = s2.split(' ');
 		for (i=0;i<s1.length;i++) {
@@ -94,7 +93,13 @@
 
 	    <script> 
 	    $(function(){
-	      $("#lexicon").load("lexicon.html"); 
+         if (location.protocol != 'https' | location.protocol != 'http') {
+            $("#lexicon").load("lexicon.html"); 
+         } else {
+            console.log(':(')
+         }
+         
+	      
 	    });
 	    </script>
       <script>/*
@@ -640,9 +645,9 @@
       <h3>Adjectives</h3>
       
       <div id="lexicon">
-      	<a href="./lexicon.html"></a>
+      	<a href="./lexicon.html">Lexicon</a>
       </div>
-      <a href='#lexicon' onclick="hide()">Hide/show lexicon</a>
+      <a id='hide-show' href='#hide-show' onclick="hide()">Hide/show lexicon</a>
       <p><br></p>
       </div><div><h2>Example text</h2>
       <p><br>

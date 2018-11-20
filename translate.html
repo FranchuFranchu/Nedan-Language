@@ -2,18 +2,12 @@
 <html>
 <head>
 	<title>Translator</title>
-	<script>
-		function main() {
-			en = document.getElementById('en')
-			nd = document.getElementById('nd')
-			en.value = 'Haha'
-		}
-
-	</script>
+	<!-- <script src="https://unpkg.com/compromise@latest/builds/compromise.min.js"></script>-->
+	<script src='basedata.js'></script>
 </head>
 <body>
-	<textarea id='en' placeholder="English"></textarea>
-	<textarea id='nd' placeholder="Nedan"></textarea>
-	<button onlick="main()">Do it!</button>
+	<textarea id="en" placeholder="English"></textarea>
+	<textarea id="nd" placeholder="Nedan"></textarea>
+	<button onclick="main()">Do it!</button>
 </body>
 </html>

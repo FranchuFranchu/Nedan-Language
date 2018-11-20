@@ -3,6 +3,9 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
 			
 		</script><script type="text/javascript">
+         function hide() {
+            $('#lexicon').hidden = !($('#lexicon').hidden)
+         }
    	  	function align(s1,s2){
    	  	console.log(s1+'\n'+s2)
    	  	s1 = s1.split(' ');
@@ -635,9 +638,11 @@
       <p>If this is not specified, it is because it is not neccesary to know e.g.</p>
       <p>To make an article plural, add -s</p>
       <h3>Adjectives</h3>
+      
       <div id="lexicon">
       	<a href="./lexicon.html"></a>
       </div>
+      <a href='#lexicon' onclick="hide()">Hide/show lexicon</a>
       <p><br></p>
       </div><div><h2>Example text</h2>
       <p><br>

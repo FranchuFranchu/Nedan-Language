@@ -35,20 +35,16 @@
    	  </script>
       <style>
          table,td,tr,th {
+         overflow-x:auto;
          border-collapse:collapse;
          border:1px solid black;
          text-align:center;
          border-color:#000000;
-         }
-         table,tr,tbody,td, th {
-
-         font-size:20;
-         }
+         }         
          .sudo-add-right-border {
             border:1px solid black;
          }
          .gloss * {
-         	overflow-x:auto;
          	white-space: pre;
             text-align:left;
 
@@ -80,13 +76,28 @@
          		text-align: center; 
          		float: right;
      		}
+
+         table,tr,tbody,td, th {
+
+            font-size:20;
          }
+
+      }
      	@media only screen and (max-device-width: 480px) {
-     		#infobox {
+     		  #infobox, table{
 	         	width: 100%;
          		text-align: center; 
          		float: none;
-     		}
+     		  }
+            body {
+               font-size:20;
+            }
+
+            table,tr,tbody,td, th {
+               overflow-x:auto;
+
+               font-size:50;
+            }
          }
       </style>
       <script src="basedata.js"></script>    
